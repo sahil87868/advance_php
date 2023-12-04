@@ -1,0 +1,123 @@
+OOPs
+=======================================
+• What Is Object Oriented Programming?
+
+A= What Is Object Oriented Programming?
+Object-oriented programming (OOP) is a programming paradigm that organizes software design around objects, which are instances of classes.
+ Objects can encapsulate data and behavior, and they interact with each other through well-defined interfaces.
+ The four main principles of OOP are encapsulation, inheritance, polymorphism, and abstraction.
+• What Are Properties Of Object Oriented Systems?
+A=Properties of object-oriented systems include:
+
+Encapsulation: The bundling of data and methods that operate on that data into a single unit (class).
+Inheritance: The ability of a class to inherit properties and methods from another class, promoting code reusability.
+Polymorphism: The ability of different classes to be treated as objects of a common superclass, allowing flexibility in handling different types.
+Abstraction: The process of simplifying complex systems by modeling classes based on their essential characteristics.
+• What Is Difference Between Class And Interface?
+A=A class is a blueprint for creating objects. It defines attributes and methods common to all objects of a certain kind.
+An interface is a contract that defines a set of methods that a class must implement. It doesn't contain any implementation; it only declares the method signatures.
+• What Is Overloading?
+A=Overloading refers to defining multiple methods in a class with the same name but different parameter lists.
+ Overloading can occur with both constructors (constructor overloading) and regular methods.
+ It allows a class to have multiple methods with the same name but different functionality based on the type or number of parameters.
+• What Is T_PAAMAYIM_NEKUDOTAYIM (Scope Resolution Operator (::) with
+Example
+A=class MyClass {
+    public static $myStaticProperty = "Hello, World!";
+
+    public static function myStaticMethod() {
+        return self::$myStaticProperty;
+    }
+}
+
+echo MyClass::myStaticMethod(); // Outputs: Hello, World!
+
+• What are the differences between abstract classes and interfaces?
+A=Abstract classes:
+Can have both abstract (unimplemented) and concrete (implemented) methods.
+Can have properties with access modifiers.
+Can extend only one class.
+Can have a constructor.
+Interfaces:
+Can only have abstract methods (no method implementation).
+Can't have properties with access modifiers (public, private, protected).
+Can extend multiple interfaces.
+Can't have a constructor.
+• Define Constructor and Destructor?
+A=Constructor: A constructor is a special method in a class that gets executed when an object of the class is created. 
+It is used to initialize the object's properties and perform any setup needed.
+
+Destructor: A destructor is a method that is automatically called when an object is destroyed or goes out of scope. It is used to perform cleanup operations.
+• How to Load Classes in PHP?
+A=// Include a class file
+include 'MyClass.php';
+
+// Require a class file
+require 'AnotherClass.php';
+
+• How to Call Parent Constructor?
+A=Are Parent Constructors Called Implicitly When Creating an Object of Class?
+No, parent constructors are not called implicitly when creating an object of a class. If you want to invoke the parent constructor, you need to do so explicitly using parent::__construct() in the child class constructor.
+
+
+• Are Parent Constructor Called Implicitly When Create An ObjectOf Class?
+A=If a constructor is defined as private, it can only be accessed from within the same class and cannot be called from outside the class.
+ If it is defined as protected, it can be accessed by the class itself and its subclasses.
+• What Happen, If Constructor Is Defined As Private Or Protected?
+A=If a constructor is defined as private, it can only be accessed from within the same class and cannot be called from outside the class. If it is defined as protected, 
+it can be accessed by the class itself and its subclasses.
+• What are PHP Magic Methods/Functions? List them Write program for Static
+Keyword in PHP?
+A=PHP magic methods are special methods with double underscores that are automatically called by the PHP interpreter. Some magic methods include __construct, __destruct, __get, __set, __isset, __unset, __call, __toString, etc.
+• Create multiple Traits and use it in to a single class?
+A=trait Trait1 {
+    public function methodFromTrait1() {
+        echo "Method from Trait1";
+    }
+}
+
+trait Trait2 {
+    public function methodFromTrait2() {
+        echo "Method from Trait2";
+    }
+}
+
+class MyClass {
+    use Trait1, Trait2;
+
+    public function myMethod() {
+        echo "My method";
+    }
+}
+
+$obj = new MyClass();
+$obj->methodFromTrait1(); // Outputs: Method from Trait1
+$obj->methodFromTrait2(); // Outputs: Method from Trait2
+$obj->myMethod(); // Outputs: My method
+
+• Write PHP Script of Object Iteration?
+A=class MyClass {
+    public $property1 = "Value 1";
+    public $property2 = "Value 2";
+    public $property3 = "Value 3";
+}
+
+$obj = new MyClass();
+
+foreach ($obj as $key => $value) {
+    echo "$key: $value\n";
+}
+
+• Use of The $this keyword 
+Aclass MyClass {
+    public $myProperty = "Hello";
+
+    public function printProperty() {
+        echo $this->myProperty;
+    }
+}
+
+$obj = new MyClass();
+$obj->printProperty(); // Outputs: Hello
+
+s
